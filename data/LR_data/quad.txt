@@ -1,0 +1,6 @@
+         -         a         b        t0
+         -         a         c        t1
+         +        t0        t1        t2
+         -         a         c        t3
+         +        t2        t3        t4
+         =        t4                   d

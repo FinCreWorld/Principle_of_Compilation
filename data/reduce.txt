@@ -1,0 +1,36 @@
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> EXPR + TT 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> EXPR + TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCE 
+
+Finish all
+

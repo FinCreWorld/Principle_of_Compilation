@@ -1,0 +1,91 @@
+FF -> dec 
+TT -> FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCE 
+FF -> dec 
+TT -> FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> dec 
+TT -> FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> dec 
+TT -> FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR + TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> id 
+TT -> FF 
+FF -> id 
+TT -> TT * FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> id 
+TT -> FF 
+FF -> id 
+TT -> TT / FF 
+EXPR -> TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+
+Finish all
+

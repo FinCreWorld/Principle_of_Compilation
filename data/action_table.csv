@@ -1,0 +1,60 @@
+semic;int;real;id;+;*;(;);=;,;dec;hex;oct;bin;realc;-;/;$
+;shift 6;shift 7;shift 8;;;;;;;;;;;;;;
+;reduce SENTENCES -> SENTENCE;reduce SENTENCES -> SENTENCE;reduce SENTENCES -> SENTENCE;;;;;;;;;;;;;;reduce SENTENCES -> SENTENCE
+shift 9;;;;;;;;;;;;;;;;;
+;;;reduce M -> ;;;;;;;;;;;;;;
+shift 11;;;;;;;;;;;;;;;;;
+;shift 6;shift 7;shift 8;;;;;;;;;;;;;;accept
+;;;reduce TYPE -> int;;;;;;;;;;;;;;
+;;;reduce TYPE -> real;;;;;;;;;;;;;;
+;;;;;;;;shift 13;;;;;;;;;
+;reduce SENTENCE -> STATE semic;reduce SENTENCE -> STATE semic;reduce SENTENCE -> STATE semic;;;;;;;;;;;;;;reduce SENTENCE -> STATE semic
+;;;reduce P -> ;;;;;;;;;;;;;;
+;reduce SENTENCE -> ASSIGN semic;reduce SENTENCE -> ASSIGN semic;reduce SENTENCE -> ASSIGN semic;;;;;;;;;;;;;;reduce SENTENCE -> ASSIGN semic
+;reduce SENTENCES -> SENTENCES SENTENCE;reduce SENTENCES -> SENTENCES SENTENCE;reduce SENTENCES -> SENTENCES SENTENCE;;;;;;;;;;;;;;reduce SENTENCES -> SENTENCES SENTENCE
+;;;shift 19;;;shift 20;;;;shift 21;shift 22;shift 23;shift 24;shift 25;;;
+reduce STATE -> TYPE M IDS;;;;;;;;;shift 26;;;;;;;;
+;;;shift 27;;;;;;;;;;;;;;
+reduce ASSIGN -> id = EXPR;;;;shift 28;;;;;;;;;;;shift 29;;
+reduce EXPR -> TT;;;;reduce EXPR -> TT;shift 30;;;;;;;;;;reduce EXPR -> TT;shift 31;
+reduce TT -> FF;;;;reduce TT -> FF;reduce TT -> FF;;;;;;;;;;reduce TT -> FF;reduce TT -> FF;
+reduce FF -> id;;;;reduce FF -> id;reduce FF -> id;;;;;;;;;;reduce FF -> id;reduce FF -> id;
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+reduce FF -> dec;;;;reduce FF -> dec;reduce FF -> dec;;;;;;;;;;reduce FF -> dec;reduce FF -> dec;
+reduce FF -> hex;;;;reduce FF -> hex;reduce FF -> hex;;;;;;;;;;reduce FF -> hex;reduce FF -> hex;
+reduce FF -> oct;;;;reduce FF -> oct;reduce FF -> oct;;;;;;;;;;reduce FF -> oct;reduce FF -> oct;
+reduce FF -> bin;;;;reduce FF -> bin;reduce FF -> bin;;;;;;;;;;reduce FF -> bin;reduce FF -> bin;
+reduce FF -> realc;;;;reduce FF -> realc;reduce FF -> realc;;;;;;;;;;reduce FF -> realc;reduce FF -> realc;
+;;;reduce N -> ;;;;;;;;;;;;;;
+reduce IDS -> P id;;;;;;;;;reduce IDS -> P id;;;;;;;;
+;;;shift 19;;;shift 20;;;;shift 21;shift 22;shift 23;shift 24;shift 25;;;
+;;;shift 19;;;shift 20;;;;shift 21;shift 22;shift 23;shift 24;shift 25;;;
+;;;shift 19;;;shift 20;;;;shift 21;shift 22;shift 23;shift 24;shift 25;;;
+;;;shift 19;;;shift 20;;;;shift 21;shift 22;shift 23;shift 24;shift 25;;;
+;;;;shift 47;;;shift 48;;;;;;;;shift 49;;
+;;;;reduce EXPR -> TT;shift 50;;reduce EXPR -> TT;;;;;;;;reduce EXPR -> TT;shift 51;
+;;;;reduce TT -> FF;reduce TT -> FF;;reduce TT -> FF;;;;;;;;reduce TT -> FF;reduce TT -> FF;
+;;;;reduce FF -> id;reduce FF -> id;;reduce FF -> id;;;;;;;;reduce FF -> id;reduce FF -> id;
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+;;;;reduce FF -> dec;reduce FF -> dec;;reduce FF -> dec;;;;;;;;reduce FF -> dec;reduce FF -> dec;
+;;;;reduce FF -> hex;reduce FF -> hex;;reduce FF -> hex;;;;;;;;reduce FF -> hex;reduce FF -> hex;
+;;;;reduce FF -> oct;reduce FF -> oct;;reduce FF -> oct;;;;;;;;reduce FF -> oct;reduce FF -> oct;
+;;;;reduce FF -> bin;reduce FF -> bin;;reduce FF -> bin;;;;;;;;reduce FF -> bin;reduce FF -> bin;
+;;;;reduce FF -> realc;reduce FF -> realc;;reduce FF -> realc;;;;;;;;reduce FF -> realc;reduce FF -> realc;
+;;;shift 53;;;;;;;;;;;;;;
+reduce EXPR -> EXPR + TT;;;;reduce EXPR -> EXPR + TT;shift 30;;;;;;;;;;reduce EXPR -> EXPR + TT;shift 31;
+reduce EXPR -> EXPR - TT;;;;reduce EXPR -> EXPR - TT;shift 30;;;;;;;;;;reduce EXPR -> EXPR - TT;shift 31;
+reduce TT -> TT * FF;;;;reduce TT -> TT * FF;reduce TT -> TT * FF;;;;;;;;;;reduce TT -> TT * FF;reduce TT -> TT * FF;
+reduce TT -> TT / FF;;;;reduce TT -> TT / FF;reduce TT -> TT / FF;;;;;;;;;;reduce TT -> TT / FF;reduce TT -> TT / FF;
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+reduce FF -> ( EXPR );;;;reduce FF -> ( EXPR );reduce FF -> ( EXPR );;;;;;;;;;reduce FF -> ( EXPR );reduce FF -> ( EXPR );
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+;;;shift 35;;;shift 36;;;;shift 37;shift 38;shift 39;shift 40;shift 41;;;
+;;;;shift 47;;;shift 58;;;;;;;;shift 49;;
+reduce IDS -> IDS , N id;;;;;;;;;reduce IDS -> IDS , N id;;;;;;;;
+;;;;reduce EXPR -> EXPR + TT;shift 50;;reduce EXPR -> EXPR + TT;;;;;;;;reduce EXPR -> EXPR + TT;shift 51;
+;;;;reduce EXPR -> EXPR - TT;shift 50;;reduce EXPR -> EXPR - TT;;;;;;;;reduce EXPR -> EXPR - TT;shift 51;
+;;;;reduce TT -> TT * FF;reduce TT -> TT * FF;;reduce TT -> TT * FF;;;;;;;;reduce TT -> TT * FF;reduce TT -> TT * FF;
+;;;;reduce TT -> TT / FF;reduce TT -> TT / FF;;reduce TT -> TT / FF;;;;;;;;reduce TT -> TT / FF;reduce TT -> TT / FF;
+;;;;reduce FF -> ( EXPR );reduce FF -> ( EXPR );;reduce FF -> ( EXPR );;;;;;;;reduce FF -> ( EXPR );reduce FF -> ( EXPR );

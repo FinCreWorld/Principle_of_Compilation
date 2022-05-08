@@ -1,0 +1,4 @@
+int a, b semic
+int c, d semic
+d = (a - b) + (a - c) + (a - c) semic
+$

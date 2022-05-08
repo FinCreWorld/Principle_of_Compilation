@@ -1,0 +1,60 @@
+TYPE -> int 
+M -> 
+P -> 
+IDS -> P id 
+N -> 
+IDS -> IDS , N id 
+STATE -> TYPE M IDS 
+SENTENCE -> STATE semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCE 
+TYPE -> int 
+M -> 
+P -> 
+IDS -> P id 
+N -> 
+IDS -> IDS , N id 
+STATE -> TYPE M IDS 
+SENTENCE -> STATE semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> EXPR + TT 
+FF -> id 
+TT -> FF 
+EXPR -> TT 
+FF -> id 
+TT -> FF 
+EXPR -> EXPR - TT 
+FF -> ( EXPR ) 
+TT -> FF 
+EXPR -> EXPR + TT 
+ASSIGN -> id = EXPR 
+SENTENCE -> ASSIGN semic 
+
+Accept a sentence
+
+SENTENCES -> SENTENCES SENTENCE 
+
+Finish all
+

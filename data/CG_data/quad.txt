@@ -1,0 +1,18 @@
+         =         1                  t0
+         =        t0                   a
+         =         2                  t1
+         =        t1                   b
+         =         3                  t2
+         =        t2                   c
+         =         4                  t3
+         =        t3                   d
+         +         a         b        t4
+         =        t4                   e
+         *         e         c        t5
+         =        t5                   f
+         /         e         f        t6
+         =        t6                   g
+         -         a         b        t7
+         -        t7         c        t8
+         -        t8         g        t9
+         =        t9                   h

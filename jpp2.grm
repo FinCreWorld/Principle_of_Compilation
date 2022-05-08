@@ -1,0 +1,39 @@
+[非终结符]
+SENTENCE STATE TYPE IDS ASSIGN EXPR TT FF SENTENCES M N P
+
+[终结符]
+semic int real id + * ( ) = , dec hex oct bin realc - /
+
+[文法起始符]
+SS
+
+[生成式]
+SS -> SENTENCES;
+SENTENCES -> SENTENCES SENTENCE;
+SENTENCES -> SENTENCE;
+SENTENCE -> STATE semic;
+SENTENCE -> ASSIGN semic;
+
+STATE -> TYPE M IDS;
+TYPE -> int;
+TYPE -> real;
+IDS -> IDS , N id;
+IDS -> P id;
+M -> ;
+N -> ;
+P -> ;
+
+ASSIGN -> id = EXPR;
+EXPR -> EXPR + TT;
+EXPR -> EXPR - TT;
+EXPR -> TT;
+TT -> TT * FF;
+TT -> TT / FF;
+TT -> FF;
+FF -> ( EXPR );
+FF -> id;
+FF -> dec;
+FF -> hex;
+FF -> oct;
+FF -> bin;
+FF -> realc;

@@ -1,0 +1,9 @@
+a = 1 semic
+b = 2 semic
+c = 3 semic
+d = 4 semic
+e = a + b semic
+f = e * c semic
+g = e / f semic
+h = a - b - c - g semic
+$
